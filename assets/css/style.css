@@ -1,5 +1,97 @@
 .landing {
     height:100vh;
     width:100%;
-    background-image: url();
+    background-image: url(../images/dev-port-land-5:25:19.gif);
+    background-size: contain;
+}
+
+#landing-animate {
+    -webkit-animation: slide 20s linear infinite;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+h1 {
+    color: ivory;
+    font-family: 'Playfair Display SC', serif;
+
+    font-size: 75px;
+}
+
+h2 {
+    color: ivory;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.name-text {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.job {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 2em;
+  }
+  
+  .ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .open-btn-host {
+      text-align: center;
+      padding-top: 70px;
+  }
+
+  #open-btn {
+      font-size: 20px;
+      font-family: 'Playfair Display SC', serif;
+      color: ivory;
+      border: solid 1px ivory;
+      text-decoration: none;
+      padding:10px;
+  }
+
+  #open-btn:hover {
+      cursor: pointer;
+      background-color: ivory;
+      border:black;
+      color: black;
+  }
+
+  .display-none {
+    display:none;
+  }
+
+  .call-fade {
+    -webkit-animation: fadein 2s;
+}
+
+  @keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.about {
+    height:100vh;
 }
