@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jacob Valentine Portfolio</title>
+    <!--Css Links-->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mandali&display=swap" rel="stylesheet">
+    <!--Icons link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="landing">
+    <section class="landing" name="home">
         <div class="name-text"></div>
         <div class="job">
             <h1 class="ml9">
@@ -20,15 +25,37 @@
             </h1>
         </div>
         <div class="open-btn-host display-none">
-            <a id="open-btn" href="#about-page">About Me &darr;</a>
+            <a id="open-btn" class="i-wrap" href="#about-page">About Me   <i class="fa fa-arrow-down"></i></a>
         </div>
     </section>
-
     <section class="about" id="about-page">
-        <h4>about me</h4>
+        <div class="nav" id="myHeader">
+            <a id="about-btn" href="#about-page">About</a>
+            <a id="portfolio-btn" href="#portfolio-page">Portfolio</a>
+            <a id="contact-btn" href="#portfolio-page">Contact</a>
+            <a id="resume-btn" onclick="window.location.href = 'https://www.slideshare.net/slideshow/embed_code/key/zBHjxXTGHy455W';">Resume</a>
+        </div>
+        <div class="icons-host">
+            <img id="icon-1" src="https://static.thenounproject.com/png/62495-200.png" alt="...">
+            <img id="icon-2" src="https://img.icons8.com/ios/420/communication.png" alt="...">
+            <img id="icon-3" src="https://www.powerschool.com/wp-content/uploads/2017/09/checkmark.png" alt="...">
+        </div>
+        <div class="tag-host">
+            <p id="tag-1" class="text-add hide">Detail Oriented</p>
+            <p id="tag-2" class="text-add hide">Stong Communication</p>
+            <p id="tag-3" class="text-add hide">Conflict Resolution</p>
+        </div>
+        <div class="my-picture">
+            <img id="my-image" src="../images/my-pic.JPG">
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio-page">
+        <h3>portfolio</h3>
     </section>
 </body>
+<!--External Libraries-->
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!--Javascript links-->
 <script type="text/javascript" src="assets/javascript/style.js"></script>
 </html>
