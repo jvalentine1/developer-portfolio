@@ -215,12 +215,12 @@ h2 {
 }
 
 #icon-1{
-    grid-column-start: 3;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
     align-self: center;
     justify-self: center;
-    height:5em;
-    width:5em
+    height:.5em;
+    width:.5em;
 }
 
 #icon-2 {
@@ -228,17 +228,17 @@ h2 {
     grid-column-end: 4;
     align-self: center;
     justify-self: center;
-    height:5em;
-    width:5em
+    height:.5em;
+    width:.5em
 }
 
 #icon-3 {
-    grid-column-start: 5;
-    grid-column-end: 5;
+    grid-column-start: 6;
+    grid-column-end: 6;
     align-self: center;
     justify-self: center;
-    height:3em;
-    width:4em
+    height:.5em;
+    width:.5em
 }
 
 .hide {
@@ -255,12 +255,12 @@ h2 {
 }
 
 #tag-1 {
-    grid-column-start: 3;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
     align-self: center;
     justify-self: center;
     font-family: 'Mandali', sans-serif;
-    color: slategrey;
+    color: rgb(71, 76, 82);
 }
 
 #tag-2 {
@@ -269,16 +269,16 @@ h2 {
     align-self: center;
     justify-self: center;
     font-family: 'Mandali', sans-serif;
-    color: slategrey;
+    color: rgb(71, 76, 82);
 }
 
 #tag-3 {
-    grid-column-start: 5;
-    grid-column-end: 5;
+    grid-column-start: 6;
+    grid-column-end: 6;
     align-self: center;
     justify-self: center;
     font-family: 'Mandali', sans-serif;
-    color: slategrey;
+    color: rgb(71, 76, 82);
 }
 
 .text-add {
@@ -286,8 +286,27 @@ h2 {
     font-size: 1.2em;
   }
   
-  .text-add .letter {
+.text-add .letter {
     display: inline-block;
     line-height: 1em;
-  }
+}
+  
+.my-picture {
+    display: grid;
+    grid-template-columns: repeat(6, 16.66%);
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    padding-top:75px;
+}
+
+#my-image {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: center;
+    height: 17em;
+    width:.01em;
+    border-radius:50%;
+}
 

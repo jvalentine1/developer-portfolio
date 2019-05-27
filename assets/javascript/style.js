@@ -63,6 +63,7 @@ $(".open-btn-host").find("a").click(function(e) {
         scrollTop: $(section).offset().top
     });
     animateTag();
+    imgRotate();
 });
 
 $(".nav").find("a").click(function(e) {
@@ -107,7 +108,33 @@ function animateTag() {
       easing: "easeOutExpo",
       duration: 250,
       delay: function(el, i) {
-        return 70*i;
+        return 50*i;
       }
     });
 };
+
+function imgRotate() {
+    $("#icon-1").animate({
+        height:"5em",
+        width:"5em"
+    }, 1100);
+
+    $("#icon-2").animate({
+        height:"5em",
+        width:"5em"
+    }, 2100);
+
+    $("#icon-3").animate({
+        height:"3em",
+        width:"4em"
+    }, 2900);
+
+    $("#my-image").animate({
+        height:"17em",
+        width:"17em"
+    }, 1100);
+
+    setTimeout(borderAnimate, 2000);
+}
+
+
