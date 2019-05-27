@@ -219,8 +219,8 @@ h2 {
     grid-column-end: 2;
     align-self: center;
     justify-self: center;
-    height:.5em;
-    width:.5em;
+    height:.1em;
+    width:.1em;
 }
 
 #icon-2 {
@@ -228,8 +228,8 @@ h2 {
     grid-column-end: 4;
     align-self: center;
     justify-self: center;
-    height:.5em;
-    width:.5em
+    height:.1em;
+    width:.1em
 }
 
 #icon-3 {
@@ -237,8 +237,8 @@ h2 {
     grid-column-end: 6;
     align-self: center;
     justify-self: center;
-    height:.5em;
-    width:.5em
+    height:.1em;
+    width:.1em
 }
 
 .hide {
@@ -260,7 +260,7 @@ h2 {
     align-self: center;
     justify-self: center;
     font-family: 'Mandali', sans-serif;
-    color: rgb(71, 76, 82);
+    color: slategray;
 }
 
 #tag-2 {
@@ -269,7 +269,7 @@ h2 {
     align-self: center;
     justify-self: center;
     font-family: 'Mandali', sans-serif;
-    color: rgb(71, 76, 82);
+    color: slategray;
 }
 
 #tag-3 {
@@ -278,7 +278,7 @@ h2 {
     align-self: center;
     justify-self: center;
     font-family: 'Mandali', sans-serif;
-    color: rgb(71, 76, 82);
+    color: slategray;
 }
 
 .text-add {
@@ -310,3 +310,76 @@ h2 {
     border-radius:50%;
 }
 
+/* .border {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    border-left: solid 1px black;
+} */
+
+#bio {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Mandali', sans-serif;
+    line-height: 1.5;
+    font-size:1.2em;
+}
+
+.text-fade {
+    -webkit-animation: textFade 2s;
+}
+
+@keyframes textFade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.about-links {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    padding-top:75px;
+}
+
+#gitHub-link {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    align-self: center;
+    justify-self: center;
+}
+
+#linkedIn-link {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    align-self: center;
+    justify-self: center;
+}
+
+#gitHub-link:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+#gitHub-link:hover:after {
+    width: 100%;
+}
+
+#linkedIn-link:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+#linkedIn-link:hover:after {
+    width: 100%;
+}

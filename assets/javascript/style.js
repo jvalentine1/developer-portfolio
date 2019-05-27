@@ -5,11 +5,12 @@ var count = 0;
 var nameElement = $("<h1>");
 
 
-//
+//open page function
 function openPage() {
     setInterval(nameRender, 50);
 }
 
+//name populate function
 function nameRender() {
 
     nameElement.append(name[count]);
@@ -27,6 +28,7 @@ function landingAnimate() {
 openPage();
 setTimeout(landingAnimate, 1500);
 
+//job title animation function
 $('.ml9 .letters').each(function(){
     $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
   });
@@ -48,6 +50,7 @@ $('.ml9 .letters').each(function(){
       delay: 1000
     });
 
+// button fade in function
     function buttonFade() {
         $(".open-btn-host").removeClass("display-none");
         $(".open-btn-host").addClass("call-fade");
@@ -66,6 +69,7 @@ $(".open-btn-host").find("a").click(function(e) {
     imgRotate();
 });
 
+//nav bar scroll function
 $(".nav").find("a").click(function(e) {
     e.preventDefault();
     var section = $(this).attr("href");
@@ -113,6 +117,7 @@ function animateTag() {
     });
 };
 
+//image grow animation
 function imgRotate() {
     $("#icon-1").animate({
         height:"5em",
@@ -134,7 +139,24 @@ function imgRotate() {
         width:"17em"
     }, 1100);
 
-    setTimeout(borderAnimate, 2000);
+    setTimeout(bioAnimate, 1000);
+    setTimeout(linkAnimate, 1000);
 }
+
+//text and link fade in function
+function bioAnimate() {
+    $("#bio").removeClass("hide");
+    $("#bio").addClass("call-fade");
+}
+
+function linkAnimate() {
+    $("#gitHub-link").removeClass("hide");
+    $("#gitHub-link").addClass("text-fade");
+
+    $("#linkedIn-link").removeClass("hide");
+    $("#linkedIn-link").addClass("text-fade");
+}
+
+//underline link function
 
 
