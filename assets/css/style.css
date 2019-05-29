@@ -26,8 +26,7 @@ h1 {
 }
 
 h2 {
-    color: ivory;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Mandali', sans-serif;
     font-size: 50px;
 }
 
@@ -106,7 +105,7 @@ h2 {
     width:100%;
 }
 
-.nav {
+nav {
     display: grid;
     grid-template-columns: repeat(12, 8.33%);
     grid-template-rows: auto;
@@ -158,30 +157,9 @@ h2 {
     color:rgb(148, 14, 14);
 }
 
-#contact-btn {
+#resume-btn {
     grid-column-start: 4;
     grid-column-end: 4;
-    align-self: left;
-    justify-self: left;
-    text-decoration: none;
-    padding:17px;
-    color:whitesmoke;
-    font-family: 'Mandali', sans-serif;
-    font-size: 20px;
-    -webkit-transition: color 1s;
-    -moz-transition:    color 1s;
-    -ms-transition:     color 1s;
-    -o-transition:      color 1s;
-    transition:         color 1s;
-}
-
-#contact-btn:hover {
-    color:rgb(148, 14, 14);
-}
-
-#resume-btn {
-    grid-column-start: 5;
-    grid-column-end: 5;
     align-self: left;
     justify-self: left;
     text-decoration: none;
@@ -207,7 +185,7 @@ h2 {
 
 .icons-host {
     display: grid;
-    grid-template-columns: repeat(7, 14.28%);
+    grid-template-columns: repeat(3, 33.33%);
     grid-template-rows: auto;
     align-content: center;
     justify-content: center;
@@ -215,8 +193,8 @@ h2 {
 }
 
 #icon-1{
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
     align-self: center;
     justify-self: center;
     height:.1em;
@@ -224,8 +202,8 @@ h2 {
 }
 
 #icon-2 {
-    grid-column-start: 4;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
     align-self: center;
     justify-self: center;
     height:.1em;
@@ -233,8 +211,8 @@ h2 {
 }
 
 #icon-3 {
-    grid-column-start: 6;
-    grid-column-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 3;
     align-self: center;
     justify-self: center;
     height:.1em;
@@ -247,7 +225,7 @@ h2 {
 
 .tag-host {
     display: grid;
-    grid-template-columns: repeat(7, 14.28%);
+    grid-template-columns: repeat(3, 33.33%);
     grid-template-rows: auto;
     align-content: center;
     justify-content: center;
@@ -255,6 +233,15 @@ h2 {
 }
 
 #tag-1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Mandali', sans-serif;
+    color: slategray;
+}
+
+#tag-2 {
     grid-column-start: 2;
     grid-column-end: 2;
     align-self: center;
@@ -263,18 +250,9 @@ h2 {
     color: slategray;
 }
 
-#tag-2 {
-    grid-column-start: 4;
-    grid-column-end: 4;
-    align-self: center;
-    justify-self: center;
-    font-family: 'Mandali', sans-serif;
-    color: slategray;
-}
-
 #tag-3 {
-    grid-column-start: 6;
-    grid-column-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 3;
     align-self: center;
     justify-self: center;
     font-family: 'Mandali', sans-serif;
@@ -309,12 +287,6 @@ h2 {
     width:.01em;
     border-radius:50%;
 }
-
-/* .border {
-    grid-column-start: 3;
-    grid-column-end: 3;
-    border-left: solid 1px black;
-} */
 
 #bio {
     grid-column-start: 4;
@@ -371,6 +343,10 @@ h2 {
     width: 100%;
 }
 
+#gitHub-link:hover {
+    cursor: pointer;
+}
+
 #linkedIn-link:after {
     content: '';
     display: block;
@@ -383,3 +359,73 @@ h2 {
 #linkedIn-link:hover:after {
     width: 100%;
 }
+
+#linkedIn-link:hover {
+    cursor: pointer;
+}
+
+.my-projects {
+    position: relative;
+    font-weight: 200;
+    font-size: 2em;
+  }
+  
+  .my-projects .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+  }
+  
+  .my-projects .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .my-projects {
+      padding-top: 75px;
+      text-align:center;
+  }
+
+  .project-host {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    padding-top:75px;
+  }
+
+  .pic-size {
+      height: .01em;
+      width: .01em;
+      border-radius: 30%;
+  }
+
+  .pic-size:hover {
+      cursor: pointer;
+  }
+
+  .project-left {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .project-center {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .project-right {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    align-self: center;
+    justify-self: center;
+  }

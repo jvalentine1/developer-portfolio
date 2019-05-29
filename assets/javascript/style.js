@@ -70,7 +70,7 @@ $(".open-btn-host").find("a").click(function(e) {
 });
 
 //nav bar scroll function
-$(".nav").find("a").click(function(e) {
+$("nav").find("a").click(function(e) {
     e.preventDefault();
     var section = $(this).attr("href");
     $("html, body").animate({
@@ -157,6 +157,37 @@ function linkAnimate() {
     $("#linkedIn-link").addClass("text-fade");
 }
 
-//underline link function
+//portfolio title animate
+$("#portfolio-btn").on("click", function(e) {
+    portTitleAnimate();
+    setTimeout(projectAnimate, 700);
+});
 
+function portTitleAnimate() {
 
+    $(".letters").removeClass("hide");
+
+$('.my-projects .letters').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+  });
+  
+  anime.timeline({loop: false})
+    
+    .add({
+      targets: '.my-projects .letter',
+      scale: [0, 1],
+      duration: 2000,
+      elasticity: 600,
+      delay: function(el, i) {
+        return 45 * (i+1)
+      }
+    });
+};
+
+//portfolio project image animate
+function projectAnimate() {
+    $(".pic-size").animate({
+        height:"10em",
+        width:"10em"
+    }, 700);
+}
