@@ -321,6 +321,8 @@ nav {
     grid-column-end: 4;
     align-self: center;
     justify-self: center;
+    text-decoration: none;
+    color:black;
 }
 
 #linkedIn-link {
@@ -328,6 +330,8 @@ nav {
     grid-column-end: 5;
     align-self: center;
     justify-self: center;
+    text-decoration: none;
+    color:black;
 }
 
 #gitHub-link:after {

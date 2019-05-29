@@ -70,7 +70,16 @@ $(".open-btn-host").find("a").click(function(e) {
 });
 
 //nav bar scroll function
-$("nav").find("a").click(function(e) {
+
+$("#about-btn").on("click", function(e) {
+    e.preventDefault();
+    var section = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(section).offset().top
+    });
+});
+
+$("#portfolio-btn").on("click", function(e) {
     e.preventDefault();
     var section = $(this).attr("href");
     $("html, body").animate({
@@ -160,7 +169,7 @@ function linkAnimate() {
 //portfolio title animate
 $("#portfolio-btn").on("click", function(e) {
     portTitleAnimate();
-    setTimeout(projectAnimate, 700);
+    setTimeout(projectAnimate, 900);
 });
 
 function portTitleAnimate() {
@@ -176,7 +185,7 @@ $('.my-projects .letters').each(function(){
     .add({
       targets: '.my-projects .letter',
       scale: [0, 1],
-      duration: 2000,
+      duration: 1800,
       elasticity: 600,
       delay: function(el, i) {
         return 45 * (i+1)
@@ -189,5 +198,12 @@ function projectAnimate() {
     $(".pic-size").animate({
         height:"10em",
         width:"10em"
-    }, 700);
+    }, 800);
 }
+
+// project hover functions
+$("#item-1").hover(function() {
+    alert("test");
+    }, function() {
+    $(this).css("height", "10em");
+    });
