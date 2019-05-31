@@ -202,8 +202,19 @@ function projectAnimate() {
 }
 
 // project hover functions
+
+var modalLink = '<h3 class="learnMore">Learn More</h3>';
+
 $("#item-1").hover(function() {
-    alert("test");
+        learnMore();
     }, function() {
-    $(this).css("height", "10em");
+        projectPopulate();
     });
+
+function learnMore() {
+    $("#item-1").html(modalLink);
+}
+
+function projectPopulate() {
+    $("#item-1").html("");
+}
