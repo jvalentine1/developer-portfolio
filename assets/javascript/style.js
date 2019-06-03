@@ -1,3 +1,4 @@
+//Global Variables
 var name = "Jacob Valentine";
 var fullStack = "Full-Stack ";
 var webDev = "Developer";
@@ -202,19 +203,101 @@ function projectAnimate() {
 }
 
 // project hover functions
-
 var modalLink = '<h3 class="learnMore">Learn More</h3>';
 
 $("#item-1").hover(function() {
-        learnMore();
+        learnMore(this);
     }, function() {
-        projectPopulate();
+        projectPopulate(this);
     });
 
-function learnMore() {
-    $("#item-1").html(modalLink);
+    $("#item-2").hover(function() {
+        learnMore(this);
+    }, function() {
+        projectPopulate(this);
+    });
+
+    $("#item-3").hover(function() {
+        learnMore(this);
+    }, function() {
+        projectPopulate(this);
+    });
+
+    $("#item-4").hover(function() {
+        learnMore(this);
+    }, function() {
+        projectPopulate(this);
+    });
+
+    $("#item-5").hover(function() {
+        learnMore(this);
+    }, function() {
+        projectPopulate(this);
+    });
+
+    $("#item-6").hover(function() {
+        learnMore(this);
+    }, function() {
+        projectPopulate(this);
+    });
+
+function learnMore(x) {
+    $(x).html(modalLink);
 }
 
-function projectPopulate() {
-    $("#item-1").html("");
+function projectPopulate(y) {
+    $(y).html("");
+    
 }
+
+// Modal Functions
+
+$("#item-1").on("click", function() {
+
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    modal.style.display = "block";
+
+    var modalDiv = $("<div>");
+    var projectTitle = $("<h3>");
+    projectTitle.text("LIRI Bot");
+    modalDiv.append(projectTitle);
+
+     var br1 = $("<br>");
+     modalDiv.append(br1);
+
+     var aboutProject = $("<p>");
+     aboutProject.addClass("project-description");
+     aboutProject.text("The LIRI Bot is a CLI application that allows the user to call multiple api's via Node.js. The user can access the Spotify, OMDB and bands in town api's through entering specific search arguments. Click on the github link below to learn more!");
+     modalDiv.append(aboutProject);
+
+     var br2 = $("<br>");
+     modalDiv.append(br2);
+
+    var linkTitle = $("<h4>");
+    linkTitle.text("Github");
+    modalDiv.append(linkTitle);
+
+    var br3 = $("<br>");
+    modalDiv.append(br3);
+
+    var link = $("<a>");
+    link.attr("target", "_blank");
+    link.attr("href", "https://github.com/jvalentine1/liri-node-app");
+    link.html("https://github.com/jvalentine1/liri-node-app");
+    modalDiv.append(link);
+
+     $(".modal-text").html(modalDiv);
+
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+      
+    window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+    }
+});

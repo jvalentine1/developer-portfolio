@@ -30,6 +30,18 @@ h2 {
     font-size: 50px;
 }
 
+h3 {
+    font-family: 'Mandali', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+h4 {
+    font-family: 'Mandali', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
 .name-text {
     text-align: center;
     padding-top: 200px;
@@ -113,6 +125,9 @@ nav {
     justify-content: center;
     background-color: slategrey;
     border-bottom: solid 3px silver;
+    /* position: -webkit-sticky; 
+    position: sticky;
+    top: 0;  */
 }
 
 #about-btn {
@@ -177,10 +192,6 @@ nav {
 #resume-btn:hover {
     cursor: pointer;
     color:rgb(148, 14, 14);
-}
-
-.portfolio {
-    height:100vh;
 }
 
 .icons-host {
@@ -368,10 +379,16 @@ nav {
     cursor: pointer;
 }
 
+.portfolio {
+    height:100vh;
+}
+
 .my-projects {
     position: relative;
     font-weight: 200;
     font-size: 2em;
+    padding-top: 75px;
+    text-align:center;
   }
   
   .my-projects .text-wrapper {
@@ -387,11 +404,6 @@ nav {
     transform-origin: 50% 100%;
     display: inline-block;
     line-height: 1em;
-  }
-
-  .my-projects {
-      padding-top: 75px;
-      text-align:center;
   }
 
   .project-host {
@@ -447,6 +459,7 @@ nav {
     width:.01em;
     background-image: url(../images/mood-quotes-pic.png);
     background-size: cover;
+    background-position: center;
     border-radius: 30%;
 }
 
@@ -455,6 +468,7 @@ nav {
     width:.01em;
     background-image: url(../images/trivia-pic.png);
     background-size: cover;
+    background-position: center;
     border-radius: 30%;
 }
 
@@ -479,6 +493,7 @@ nav {
     width:.01em;
     background-image: url(../images/rps-pic.png);
     background-size: cover;
+    background-position: center;
     border-radius: 30%;
 }
 
@@ -486,7 +501,61 @@ nav {
     color:ivory;
     font-family: 'Mandali', sans-serif;
     font-size: 20px;
+    text-decoration: underline;
     text-align: center;
-    padding-top:2.5em;
-    
+    margin-top:2.7em;
+    padding: 10px;
+    background-color: slategray;
+    -webkit-animation: textFade2 .5s;
 }
+
+@keyframes textFade2 {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .project-description {
+      font-family: 'Mandali', sans-serif;
+      line-height: 1.5;
+      font-size:15px;
+      
+  }
