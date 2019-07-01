@@ -2,6 +2,8 @@
     box-sizing: border-box;  
 }
 
+/* ===== Landing Page =====*/
+
 .landing {
     height:100vh;
     width:100%;
@@ -117,6 +119,8 @@ h4 {
     width:100%;
 }
 
+/* ===== Nav Bar ===== */
+
 nav {
     display: grid;
     grid-template-columns: repeat(12, 8.33%);
@@ -125,9 +129,6 @@ nav {
     justify-content: center;
     background-color: slategrey;
     border-bottom: solid 3px silver;
-    /* position: -webkit-sticky; 
-    position: sticky;
-    top: 0;  */
 }
 
 #about-btn {
@@ -193,6 +194,8 @@ nav {
     cursor: pointer;
     color:rgb(148, 14, 14);
 }
+
+/* ===== About Page ===== */
 
 .icons-host {
     display: grid;
@@ -379,6 +382,8 @@ nav {
     cursor: pointer;
 }
 
+/* ===== Portfolio Page ===== */
+
 .portfolio {
     height:100vh;
 }
@@ -446,7 +451,7 @@ nav {
     justify-self: center;
   }
 
-  #item-1 {
+  .item-1 {
     height:.01em;
     width:.01em;
     background-image: url(../images/liri-pic.png);
@@ -454,7 +459,7 @@ nav {
     border-radius: 30%;
   }
 
-  #item-2 {
+  .item-2 {
     height:.01em;
     width:.01em;
     background-image: url(../images/mood-quotes-pic.png);
@@ -463,7 +468,7 @@ nav {
     border-radius: 30%;
 }
 
-#item-3 {
+.item-3 {
     height:.01em;
     width:.01em;
     background-image: url(../images/trivia-pic.png);
@@ -472,7 +477,7 @@ nav {
     border-radius: 30%;
 }
 
-#item-4 {
+.item-4 {
     height:.01em;
     width:.01em;
     background-image: url(http://transparency.greatheartsacademies.org/wp-content/uploads/sites/38/2018/10/default-placeholder.png);
@@ -480,7 +485,7 @@ nav {
     border-radius: 30%;
 }
 
-#item-5 {
+.item-5 {
     height:.01em;
     width:.01em;
     background-image: url(http://transparency.greatheartsacademies.org/wp-content/uploads/sites/38/2018/10/default-placeholder.png);
@@ -488,10 +493,19 @@ nav {
     border-radius: 30%;
 }
 
-#item-6 {
+.item-6 {
     height:.01em;
     width:.01em;
     background-image: url(../images/rps-pic.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30%;
+}
+
+.learnMore-img {
+    height:10em;
+    width:10em;
+    background-image: url(../images/code-pic.png);
     background-size: cover;
     background-position: center;
     border-radius: 30%;
@@ -514,19 +528,19 @@ nav {
     to {opacity: 1;}
 }
 
-/* The Modal (background) */
+/* The Modal Background */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
   }
   
   /* Modal Content */
