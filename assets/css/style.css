@@ -454,8 +454,9 @@ nav {
   .item-1 {
     height:.01em;
     width:.01em;
-    background-image: url(../images/liri-pic.png);
+    background-image: url(../images/friend-finder-pic.png);
     background-size: cover;
+    background-position: center;
     border-radius: 30%;
   }
 
@@ -480,23 +481,25 @@ nav {
 .item-4 {
     height:.01em;
     width:.01em;
-    background-image: url(http://transparency.greatheartsacademies.org/wp-content/uploads/sites/38/2018/10/default-placeholder.png);
+    background-image: url(../images/liri-pic.png);
     background-size: cover;
+    background-position: center;
     border-radius: 30%;
 }
 
 .item-5 {
     height:.01em;
     width:.01em;
-    background-image: url(http://transparency.greatheartsacademies.org/wp-content/uploads/sites/38/2018/10/default-placeholder.png);
+    background-image: url(../images/mood-quotes-pic.png);
     background-size: cover;
+    background-position: center;
     border-radius: 30%;
 }
 
 .item-6 {
     height:.01em;
     width:.01em;
-    background-image: url(../images/rps-pic.png);
+    background-image: url(../images/trivia-pic.png);
     background-size: cover;
     background-position: center;
     border-radius: 30%;
