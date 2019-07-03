@@ -59,7 +59,7 @@ $('.ml9 .letters').each(function(){
 
 setTimeout(buttonFade, 1000);
 
-//scroll nav bar functions
+//scroll home page function
 $(".open-btn-host").find("a").click(function(e) {
     e.preventDefault();
     var section = $(this).attr("href");
@@ -88,20 +88,44 @@ $("#portfolio-btn").on("click", function(e) {
     });
 });
 
-//sticky nav bar function
-window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("myHeader");
+// Content populate on scroll function
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
 
-var sticky = header.offsetTop;
+$(window).scroll(function() {  
+    if(isScrolledIntoView($('.portfolio')))
+    {
+        $(".animated-nav").animate({
+            height:"57px"
+        }, 200);
+    
+        $(".animated-attr").removeClass("vis-hide");
 
-function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
+        portTitleAnimate();
+        setTimeout(projectAnimate, 900);
     }
-  }
+
+    if(!isScrolledIntoView($('.portfolio'))) {
+        $(".animated-nav").animate({
+            height:"1px"
+        }, 100);
+
+        $(".animated-attr").removeClass("vis-hide");
+    }
+
+    if(isScrolledIntoView($('.about'))) {
+        animateTag();
+        imgRotate();
+    }
+    
+});
 
   //icon text animation
 
@@ -168,10 +192,6 @@ function linkAnimate() {
 }
 
 //portfolio title animate
-$("#portfolio-btn").on("click", function(e) {
-    portTitleAnimate();
-    setTimeout(projectAnimate, 900);
-});
 
 function portTitleAnimate() {
 

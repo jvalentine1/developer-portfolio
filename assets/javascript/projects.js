@@ -37,7 +37,8 @@ $("#item-1").on("click", function() {
     link.html("https://friend-finder-jv.herokuapp.com/");
     modalDiv.append(link);
 
-    
+    var br4 = $("<br>");
+    modalDiv.append(br4);
 
     var linkTitle2 = $("<h4>");
     linkTitle2.text("Github");

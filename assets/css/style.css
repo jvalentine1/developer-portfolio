@@ -388,11 +388,28 @@ nav {
     height:100vh;
 }
 
+.animated-nav {
+    height:1px;
+}
+
+.vis-hide {
+    visibility: hidden;
+}
+
+.fade-out {
+    -webkit-animation: fadeout 1s;
+}
+
+@keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 .my-projects {
     position: relative;
     font-weight: 200;
     font-size: 2em;
-    padding-top: 75px;
+    padding-top: 60px;
     text-align:center;
   }
   
