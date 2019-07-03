@@ -99,33 +99,50 @@ function isScrolledIntoView(elem)
     return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
-$(window).scroll(function() {  
-    if(isScrolledIntoView($('.portfolio')))
-    {
-        $(".animated-nav").animate({
-            height:"57px"
-        }, 200);
+// $(window).scroll(function() {  
+//     if(isScrolledIntoView($('.portfolio')))
+//     {
+//         $(".animated-nav").animate({
+//             height:"57px"
+//         }, 200);
     
-        $(".animated-attr").removeClass("vis-hide");
+//         $(".animated-attr").removeClass("vis-hide");
 
-        portTitleAnimate();
-        setTimeout(projectAnimate, 900);
-    }
+//         portTitleAnimate();
+//         setTimeout(projectAnimate, 900);
+//     }
 
-    if(!isScrolledIntoView($('.portfolio'))) {
-        $(".animated-nav").animate({
-            height:"1px"
-        }, 100);
+    // if(!isScrolledIntoView($('.portfolio'))) {
+    //     $(".animated-nav").animate({
+    //         height:"1px"
+    //     }, 100);
 
-        $(".animated-attr").removeClass("vis-hide");
-    }
+    //     $(".animated-attr").removeClass("vis-hide");
+//     }
 
-    if(isScrolledIntoView($('.about'))) {
-        animateTag();
-        imgRotate();
-    }
+//     if(isScrolledIntoView($('.about'))) {
+//         animateTag();
+//         imgRotate();
+//     }
     
-});
+// });
+
+$(document).on('scroll', function() {
+    if($(this).scrollTop()>=$('.portfolio').position().top){
+        yourActionHere();
+    }
+})
+
+function yourActionHere() {
+    $(".animated-nav").animate({
+        height:"57px"
+    }, 400);
+
+    $(".animated-attr").removeClass("vis-hide");
+
+    portTitleAnimate();
+    setTimeout(projectAnimate, 900);
+}
 
   //icon text animation
 
