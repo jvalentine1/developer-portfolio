@@ -76,7 +76,7 @@ $("#about-btn").on("click", function(e) {
     e.preventDefault();
     var section = $(this).attr("href");
     $("html, body").animate({
-        scrollTop: $(section).offset().top
+        scroll: $(section).offset().top
     });
 });
 
@@ -87,6 +87,13 @@ $("#portfolio-btn").on("click", function(e) {
         scrollTop: $(section).offset().top
     });
 });
+
+$(document).on('scroll', function() {
+    if($(this).scrollTop()>=$('.about').position().top){
+        animateTag();
+        imgRotate();
+    }
+})
 
 
 
@@ -109,27 +116,31 @@ function navDropDown() {
 }
 
   //icon text animation
+  var executed = false;
 
-function animateTag() {
+var animateTag = function() {
+        if(!executed) {
+            executed = true;
 
-  $(".text-add").removeClass("hide");
+            $(".text-add").removeClass("hide");
 
-  $('.text-add').each(function(){
-    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-  });
-
-  anime.timeline()
-    .add({
-      targets: '.text-add .letter',
-      scale: [4,1],
-      opacity: [0,1],
-      translateZ: 0,
-      easing: "easeOutExpo",
-      duration: 250,
-      delay: function(el, i) {
-        return 50*i;
-      }
-    });
+            $('.text-add').each(function(){
+                $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+            });
+    
+            anime.timeline()
+                .add({
+                targets: '.text-add .letter',
+                scale: [4,1],
+                opacity: [0,1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 250,
+                delay: function(el, i) {
+                    return 50*i;
+                }
+            });           
+        }
 };
 
 //image grow animation

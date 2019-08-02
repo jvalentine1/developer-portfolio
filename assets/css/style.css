@@ -593,3 +593,11 @@ nav {
       font-size:15px;
       
   }
+
+  .title-decorate {
+      text-decoration:underline;
+  }
+
+  .link-pad {
+      padding-top:15px;
+  }

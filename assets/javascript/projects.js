@@ -11,6 +11,7 @@ $("#item-1").on("click", function() {
     var modalDiv = $("<div>");
     var projectTitle = $("<h3>");
     projectTitle.text("Friend Finder App");
+    projectTitle.addClass("title-decorate");
     modalDiv.append(projectTitle);
 
      var br1 = $("<br>");
@@ -25,7 +26,7 @@ $("#item-1").on("click", function() {
      modalDiv.append(br2);
 
     var linkTitle = $("<h4>");
-    linkTitle.text("Heroku");
+    linkTitle.text("Heroku:");
     modalDiv.append(linkTitle);
 
     var br3 = $("<br>");
@@ -41,7 +42,8 @@ $("#item-1").on("click", function() {
     modalDiv.append(br4);
 
     var linkTitle2 = $("<h4>");
-    linkTitle2.text("Github");
+    linkTitle2.text("Github:");
+    linkTitle2.addClass("link-pad");
     modalDiv.append(linkTitle2);
 
     var br5 = $("<br>");
@@ -78,6 +80,7 @@ $("#item-4").on("click", function() {
     var modalDiv = $("<div>");
     var projectTitle = $("<h3>");
     projectTitle.text("LIRI Bot");
+    projectTitle.addClass("title-decorate");
     modalDiv.append(projectTitle);
 
      var br1 = $("<br>");
@@ -92,7 +95,7 @@ $("#item-4").on("click", function() {
      modalDiv.append(br2);
 
     var linkTitle = $("<h4>");
-    linkTitle.text("Github");
+    linkTitle.text("Github:");
     modalDiv.append(linkTitle);
 
     var br3 = $("<br>");
@@ -128,6 +131,7 @@ $("#item-5").on("click", function() {
 
     var modalDiv = $("<div>");
     var projectTitle = $("<h3>");
+    projectTitle.addClass("title-decorate");
     projectTitle.text("Mood Quotes App");
     modalDiv.append(projectTitle);
 
@@ -143,7 +147,7 @@ $("#item-5").on("click", function() {
      modalDiv.append(br2);
 
     var linkTitle = $("<h4>");
-    linkTitle.text("Deployed");
+    linkTitle.text("Deployed:");
     modalDiv.append(linkTitle);
 
     var br3 = $("<br>");
@@ -158,7 +162,8 @@ $("#item-5").on("click", function() {
     
 
     var linkTitle2 = $("<h4>");
-    linkTitle2.text("Github");
+    linkTitle2.text("Github:");
+    linkTitle2.addClass("link-pad");
     modalDiv.append(linkTitle2);
 
     var br5 = $("<br>");
@@ -195,6 +200,7 @@ $("#item-6").on("click", function() {
     var modalDiv = $("<div>");
     var projectTitle = $("<h3>");
     projectTitle.text("Mt. Everest Trivia");
+    projectTitle.addClass("title-decorate");
     modalDiv.append(projectTitle);
 
      var br1 = $("<br>");
@@ -209,7 +215,7 @@ $("#item-6").on("click", function() {
      modalDiv.append(br2);
 
     var linkTitle = $("<h4>");
-    linkTitle.text("Deployed");
+    linkTitle.text("Deployed:");
     modalDiv.append(linkTitle);
 
     var br3 = $("<br>");
@@ -224,7 +230,8 @@ $("#item-6").on("click", function() {
     
 
     var linkTitle2 = $("<h4>");
-    linkTitle2.text("Github");
+    linkTitle2.text("Github:");
+    linkTitle2.addClass("link-pad");
     modalDiv.append(linkTitle2);
 
     var br5 = $("<br>");
