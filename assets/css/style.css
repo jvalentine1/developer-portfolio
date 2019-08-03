@@ -471,7 +471,7 @@ nav {
   .item-1 {
     height:.01em;
     width:.01em;
-    background-image: url(../images/friend-finder-pic.png);
+    background-image: url(../images/landing-screenshot.png);
     background-size: cover;
     background-position: center;
     border-radius: 30%;
@@ -480,7 +480,7 @@ nav {
   .item-2 {
     height:.01em;
     width:.01em;
-    background-image: url(../images/mood-quotes-pic.png);
+    background-image: url(../images/friend-finder-pic.png);
     background-size: cover;
     background-position: center;
     border-radius: 30%;
@@ -489,7 +489,7 @@ nav {
 .item-3 {
     height:.01em;
     width:.01em;
-    background-image: url(../images/trivia-pic.png);
+    background-image: url(../images/news-scrape-pic.png);
     background-size: cover;
     background-position: center;
     border-radius: 30%;
@@ -507,7 +507,7 @@ nav {
 .item-5 {
     height:.01em;
     width:.01em;
-    background-image: url(../images/mood-quotes-pic.png);
+    background-image: url(../images/giftastic-pic.png);
     background-size: cover;
     background-position: center;
     border-radius: 30%;
